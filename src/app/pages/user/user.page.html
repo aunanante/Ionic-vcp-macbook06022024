@@ -1,0 +1,32 @@
+<!-- user.page.html -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>User Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="businessOwners.length > 0">
+    <ion-card-header>
+      First Business Owner
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label>ID: {{ businessOwners[0].id }}</ion-label>
+      <ion-label>Email: {{ businessOwners[0].email }}</ion-label>
+      <ion-label>Name: {{ businessOwners[0].name }}</ion-label>
+      <ion-label>Address: {{ businessOwners[0].adresse }}</ion-label>
+      <ion-label>Telephone: {{ businessOwners[0].telephone1 }}</ion-label>
+      <!-- Add other fields as needed -->
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card *ngIf="businessOwners.length === 0">
+    <ion-card-header>
+      No Business Owners Found
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label>No business owners associated with the current user.</ion-label>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
